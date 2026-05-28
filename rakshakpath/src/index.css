@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-200 m-0 p-0 font-sans antialiased overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-900/70 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  
+  .glass-card {
+    @apply bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 shadow-xl rounded-xl p-6;
+  }
+
+  .text-neon-blue {
+    color: #38bdf8;
+  }
+  .bg-neon-blue {
+    background-color: #38bdf8;
+  }
+  .text-neon-red {
+    color: #ef4444;
+  }
+  .bg-neon-red {
+    background-color: #ef4444;
+  }
+  .text-neon-green {
+    color: #22c55e;
+  }
+  .bg-neon-green {
+    background-color: #22c55e;
+  }
+  .text-neon-orange {
+    color: #f97316;
+  }
+  .bg-neon-orange {
+    background-color: #f97316;
+  }
+}
+
+/* Spin animation for loading indicators */
+@keyframes spin {
+  from { transform: translateY(-50%) rotate(0deg); }
+  to { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Input placeholder color for dark theme */
+input::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5); 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.5); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.8); 
+}
